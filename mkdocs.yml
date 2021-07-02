@@ -1,0 +1,8 @@
+site_name: CLOUDACODE
+site_url: https://cloudacode.github.io
+theme:
+  name: material
+  palette:
+    primary: teal
+  font:
+    text: 'Work Sans'
