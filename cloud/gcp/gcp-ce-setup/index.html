@@ -11,21 +11,21 @@
         <meta name="author" content="KC Chang">
       
       
-        <link rel="canonical" href="https://cloudacode.github.io/tutorials/">
+        <link rel="canonical" href="https://cloudacode.github.io/tutorials/cloud/gcp/gcp-ce-setup/">
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.9">
     
     
       
-        <title>CLOUDACODE - cloud, devops, kubernetes, and cncf</title>
+        <title>GCP - Compute Engine 구축 - CLOUDACODE - cloud, devops, kubernetes, and cncf</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.ca7ac06f.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ca7ac06f.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.f1a3b89f.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.f1a3b89f.min.css">
         
       
     
@@ -57,7 +57,7 @@
     <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
   
     
-    <script>function __prefix(e){return new URL(".",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    <script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-cloudacode" class="md-skip">
+        <a href="#gcp-compute-engine" class="md-skip">
           Skip to content
         </a>
       
@@ -76,7 +76,7 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="CLOUDACODE - cloud, devops, kubernetes, and cncf" class="md-header__button md-logo" aria-label="CLOUDACODE - cloud, devops, kubernetes, and cncf" data-md-component="logo">
+    <a href="../../.." title="CLOUDACODE - cloud, devops, kubernetes, and cncf" class="md-header__button md-logo" aria-label="CLOUDACODE - cloud, devops, kubernetes, and cncf" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -95,7 +95,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              GCP - Compute Engine 구축
             
           </span>
         </div>
@@ -169,7 +169,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="CLOUDACODE - cloud, devops, kubernetes, and cncf" class="md-nav__button md-logo" aria-label="CLOUDACODE - cloud, devops, kubernetes, and cncf" data-md-component="logo">
+    <a href="../../.." title="CLOUDACODE - cloud, devops, kubernetes, and cncf" class="md-nav__button md-logo" aria-label="CLOUDACODE - cloud, devops, kubernetes, and cncf" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -199,65 +199,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Home
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
         Home
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#cloudacode-project" class="md-nav__link">
-    Cloudacode Project 🚀
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#project-layout" class="md-nav__link">
-    Project layout 📚
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#me" class="md-nav__link">
-    Me 🧑‍🚀
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -268,12 +214,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       <label class="md-nav__link" for="__nav_2">
         Tutorial
@@ -289,12 +237,14 @@
             
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
       
       <label class="md-nav__link" for="__nav_2_1">
         Cloud
@@ -312,7 +262,7 @@
   
   
     <li class="md-nav__item">
-      <a href="cloud/aws/ec2-setup/" class="md-nav__link">
+      <a href="../../aws/ec2-setup/" class="md-nav__link">
         AWS - EC2 구축
       </a>
     </li>
@@ -322,11 +272,85 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="cloud/gcp/gcp-ce-setup/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          GCP - Compute Engine 구축
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         GCP - Compute Engine 구축
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#system-architecture" class="md-nav__link">
+    System Architecture
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-launch-gce-instance" class="md-nav__link">
+    1. Launch GCE instance
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Launch GCE instance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-vm-instances" class="md-nav__link">
+    Create VM instances
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-access-a-gce-instance" class="md-nav__link">
+    2. Access a GCE instance
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-install-httpd-on-linux" class="md-nav__link">
+    3. Install httpd on Linux
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -399,22 +423,42 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#cloudacode-project" class="md-nav__link">
-    Cloudacode Project 🚀
+  <a href="#system-architecture" class="md-nav__link">
+    System Architecture
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#project-layout" class="md-nav__link">
-    Project layout 📚
+  <a href="#1-launch-gce-instance" class="md-nav__link">
+    1. Launch GCE instance
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Launch GCE instance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-vm-instances" class="md-nav__link">
+    Create VM instances
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-access-a-gce-instance" class="md-nav__link">
+    2. Access a GCE instance
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#me" class="md-nav__link">
-    Me 🧑‍🚀
+  <a href="#3-install-httpd-on-linux" class="md-nav__link">
+    3. Install httpd on Linux
   </a>
   
 </li>
@@ -432,35 +476,43 @@
               
                 
                 
-                <h1 id="welcome-to-cloudacode">Welcome to Cloudacode</h1>
-<h2 id="cloudacode-project">Cloudacode Project 🚀</h2>
-<p>Get started with step-by-step tutorials for <code>cloud, devops, kubernetes, and cncf technology</code>.</p>
-<h2 id="project-layout">Project layout 📚</h2>
-<pre><code>cloud/
-    ...       # Cloud 101
-devops(CICD)/
-    ...       # Continuous Integration / Deployment
-devops(Terraform)/
-    ...       # Terraform
-kubernetes/
-    ...       # Kubernetes
-cncf/
-    ...       # Cncf project
-etc/
-    ...       # Etc
-</code></pre>
-<h2 id="me">Me 🧑‍🚀</h2>
-<p>A seasoned cloud and site reliability engineer with 12 years of experience in the web-scale tech industry.</p>
-<p>Areas of professional expertise:</p>
+                <h1 id="gcp-compute-engine">GCP - Compute Engine 구축</h1>
+<p><strong>GCP 환경 구성 및 Compute Engine 구축</strong></p>
+<p>이번 실습은 GCP를 통해 서비스 구성 시 가장 기본이 되는 Compute Engine 구성 실습을 통해서 GCP의 기본 서비스들을 이해 하고 GCP 콘솔 활용 방법을 익히기 위함입니다. Compute Engine 컴퓨팅 리소스 활용 및 서비스 배포를 위한 기본 작업들을 이해 할 수 있습니다.</p>
+<p><strong>Time to Complete: 1-2 hours</strong></p>
+<p><strong>Tutorial Prereqs:</strong></p>
 <ul>
-<li>On and off-prem cloud environment engineering</li>
-<li>Deliver scalable and reliable infra with K8S</li>
-<li>Improve operation efficiency and modernize legacy environment</li>
-<li>Problem Solving / Strategic Thinking</li>
-<li>Cross-functional communications</li>
-<li>Project planning and management </li>
+<li><strong>GCP Account and Administrator-level or PowerUser-level access to it</strong></li>
 </ul>
-<p>For full profile visit <a href="https://www.linkedin.com/in/kyungcheol/">kyungcheol's Linkedin</a>.</p>
+<h2 id="system-architecture">System Architecture</h2>
+<h2 id="1-launch-gce-instance">1. Launch GCE instance</h2>
+<p>https://console.cloud.google.com/compute</p>
+<h3 id="create-vm-instances">Create VM instances</h3>
+<ul>
+<li>Name: <code>gcp-test</code></li>
+<li>Region: <code>asia-northeast3(Seoul)</code> Zone: <code>asia-northeast3-a</code></li>
+<li>Machine configuration: 인스턴스의 크기(타입)</li>
+<li>Confidential VM service: 데이터 암호화 옵션(<code>변경 없음</code>)</li>
+<li>Container: GKE 혹은 GCE에 컨테이너를 활용 옵션(<code>변경 없음</code>)</li>
+<li>Boot Disk: OS 이미지(<code>Debian</code>)</li>
+<li>Identity and API access</li>
+<li>Service account: 인스턴스, 인스턴스에서 실행되는 앱이 다른 GCP 서비스와 상호작용 할때 필요한 서비스 계정(<code>변경 없음</code>)</li>
+<li>Access scopes: 접근 범위(<code>Allow default access</code>)</li>
+<li>Firewall: 방화벽</li>
+<li>Allow HTTP traffic (<code>체크</code>)</li>
+</ul>
+<h2 id="2-access-a-gce-instance">2. Access a GCE instance</h2>
+<p>VM Instance 콘솔 화면 Connect 항목에 <code>SSH</code> 클릭 후 <code>View gcloud command</code> 를 통해 인스턴스 접근
+<img alt="gce-connect-via-ssh" src="../assets/gce-connect-via-ssh.png" /></p>
+<p>gcloud command line 창에서 오른쪽 아래 <code>RUN IN CLOUD SHELL</code> 클릭</p>
+<p>Cloud Shell이 열리고 인스턴스 접근에 대한 커멘드 라인이 자동으로 입력되어 있으므로 추가 변경 없이 진행 하면 정상적으로 인스턴스에 접근이 됨
+* SSH Key 생성이 이루어지고 추가 입력값 없이 빈칸으로 진행</p>
+<h2 id="3-install-httpd-on-linux">3. Install httpd on Linux</h2>
+<p>접근한 Linux에서 Nginx 설치</p>
+<pre><code class="language-bash">sudo apt-get update
+sudo apt-get install nginx -y
+</code></pre>
+<p>브라우져에서 GCE <code>http://EXTERNAL_IP/</code> 접속 및 페이지 확인</p>
                 
               
               
@@ -479,21 +531,21 @@ etc/
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-      
         
-        <a href="cloud/aws/ec2-setup/" class="md-footer__link md-footer__link--next" aria-label="Next: AWS - EC2 구축" rel="next">
+        <a href="../../aws/ec2-setup/" class="md-footer__link md-footer__link--prev" aria-label="Previous: AWS - EC2 구축" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
-                Next
+                Previous
               </span>
               AWS - EC2 구축
             </div>
           </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
         </a>
+      
       
     </nav>
   
@@ -516,10 +568,10 @@ etc/
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": ".", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.82b56eb2.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.82b56eb2.min.js"></script>
       
     
   </body>
